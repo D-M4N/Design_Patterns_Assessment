@@ -2,7 +2,9 @@
 using GreatQuotes.Data;
 
 namespace GreatQuotes.ViewModels {
-    public class GreatQuoteViewModel : BaseViewModel {
+
+
+    public class GreatQuoteViewModel : MainViewModel {
 
         private string _author;
         private string _quoteText;
@@ -25,5 +27,8 @@ namespace GreatQuotes.ViewModels {
             get => _quoteText; 
             set => SetPropertyValue(ref _quoteText, value); 
         }
+
+       
+
     }
 }

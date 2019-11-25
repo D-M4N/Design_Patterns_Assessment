@@ -7,7 +7,9 @@ using GreatQuotes.Data;
 using GreatQuotes.ViewModels;
 
 namespace GreatQuotes.iOS {
-    public class QuoteLoader {
+    public class QuoteLoader : IQuoteLoader
+
+    {
         const string FileName = "quotes.xml";
 
         public IEnumerable<GreatQuoteViewModel> Load() {
@@ -53,6 +55,8 @@ namespace GreatQuotes.iOS {
 
             doc.Save(filename);
         }
+
+        
 
         #region Internal Data
         static readonly string DefaultData =
